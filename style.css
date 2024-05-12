@@ -1,0 +1,99 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header .logo-banner {
+    display: inline-flex;
+    align-items: center;
+}
+.header img.logo {
+    max-width: 150px;
+}
+#cart {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+.product-card img{
+    max-width: 13%;
+    height: auto;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.product-card h3,
+.product-card p,
+.product-card .price {
+margin: 5px 0; /* Добавим немного отступов между элементами */
+}
+
+.product-card .price {
+font-weight: bold;
+color: #E44D26; /* Пример цвета для цены, можно выбрать любой */
+font-size: 1.2em; /* Увеличим шрифт цены */
+}
+.products {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Это центрирует карточки в контейнере */
+gap: 20px; /* Устанавливаем пространство между карточками */
+}
+
+.product-card {
+flex-basis: calc(50% - 20px); /* Каждая карточка будет занимать половину ширины контейнера за вычетом gap */
+max-width: calc(50% - 20px); /* Задаем максимальную ширину, чтобы учесть margin */
+display: flex;
+flex-direction: column; /* Элементы будут идти сверху вниз */
+align-items: center; /* Центрируем содержимое карточек по горизонтали */
+box-sizing: border-box; /* Включаем padding и border в общую ширину элементов */
+}
+
+.product-card img {
+max-width: 100%; /* Изображения будут подстраиваться под размеры карточки */
+height: auto; /* Высота изображений будет автоматически подстраиваться */
+}
+
+.product-card .price,
+.product-card .add-to-cart {
+self-align: stretch; /* Растягиваем кнопку и цену на всю доступную ширину */
+text-align: center;
+margin-top: 10px; /* Добавляем небольшой отступ сверху */
+}
+
+.add-to-cart {
+padding: 10px;
+background-color: #4CAF50; /* Пример цвета фона кнопки */
+border: none;
+color: white;
+cursor: pointer;
+}
+
+.add-to-cart:hover {
+background-color: #45a049; /* Цвет кнопки при наведении */
+}
+
+/* Медиа-запросы для адаптивности, если требуется */
+@media (max-width: 768px) {
+.product-card {
+    flex-basis: calc(100% - 20px); /* На меньших экранах один товар на ширину контейнера */
+    max-width: calc(100% - 20px);
+}
+}
+.product-images {
+display: flex; /* Делаем контейнер flex для горизонтального расположения элементов */
+justify-content: center; /* Центрируем изображения */
+gap: 10px; /* Задаем промежуток между изображениями */
+}
+.product-images img {
+    width: calc(50% - 10px); /* Все изображения будут занимать половину места в контейнере с учетом промежутка */
+}
