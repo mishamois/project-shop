@@ -1,9 +1,9 @@
 var cartCounter = 0;
-    var cartDisplay = document.getElementById('cart');
+    var cartDisplay = document.querySelector('#cart span');
 
     function addToCart() {
         cartCounter++;
-        cartDisplay.textContent = 'Корзина (' + cartCounter + ')';
+        cartDisplay.textContent = cartCounter;
     }
 
     var addToCartButtons = document.querySelectorAll('.add-to-cart');
